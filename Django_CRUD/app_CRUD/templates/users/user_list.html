@@ -9,11 +9,15 @@
             <th>name</th>
             <th>age</th>
         </tr>
-        {% for user in users %}
+        {% for user in user_list %}
         <tr>
-            <td>{{user.id}}</td>
+            <td>{{user.id_user}}</td>
             <td>{{user.name}}</td>
             <td>{{user.age}}</td>
+            <td>
+                <a href="{% url 'user_delete' pk=user.id_user %}" class="btn btn-outline-danger btn-sm">Excluir</a>
+                <a href="{% url 'user_update' pk=user.id_user %}" class="btn btn-outline-primary btn-sm">Editar</a>
+            </td>    
         </tr>
         {% endfor %}
     </table>

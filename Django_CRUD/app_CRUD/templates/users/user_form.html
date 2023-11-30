@@ -1,6 +1,6 @@
 {% extends 'users/base.html' %}
 {% block conteudo %}
-<form action="{% url 'user_list' %}" method="post">
+<form method="post">
     {% csrf_token %}
     <div style="text-align: center;" class="container">
         <h1>Usuarios</h1>
